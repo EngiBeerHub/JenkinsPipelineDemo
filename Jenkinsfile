@@ -28,7 +28,7 @@
             steps {
                 echo 'Testing'
                 script {
-                    def url = 'https://test-env-jenkins-engibeer.s3.ap-southeast-2.amazonaws.com/index.html'
+                    def url = 'https://test-env-jenkins-engibeer.s3.ap-southeast-2.amazonaws.com/index1.html'
                     def response = sh(script: "curl -s -o /dev/null -w '%{http_code}' '$url'", returnStdout: true)
 
                     if (response == '200') {
